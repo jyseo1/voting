@@ -29,6 +29,10 @@ app.get('/', (req, res) => {
 	res.render('home');
 });
 
+app.get('/registrationstatus', (req, res) => {
+	res.render('checkregistration');
+});
+
 app.get('/deadlines', (req, res) => {
 	// Deadline.find()
 	// 	.then(result => {
