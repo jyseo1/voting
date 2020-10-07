@@ -72,5 +72,5 @@ app.get('/*', (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log('votingiscool server is running! On port: ' + port + "on db: " + DATABASEURL);
+	console.log('votingiscool server is running! On port: ' + port);
 });
