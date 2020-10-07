@@ -65,7 +65,7 @@ app.get('/moreinfo', (req, res) => {
 	res.render('moreinfo');
 });
 
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
 	res.render('/');
 });
 
