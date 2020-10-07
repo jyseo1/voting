@@ -38,7 +38,7 @@ app.get('/deadlines', (req, res) => {
 	// 	});
 	Deadline.find({}, (err, allDeadlines) => {
 		if(err){
-			console.log(err);
+			console.log("THIS IS DB ERROR: " + err);
 		} else {
 			res.render('deadlines', {deadlines: allDeadlines});
 		}
@@ -72,5 +72,5 @@ app.get('/*', (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log('votingiscool server is running! On port: ' + port);
+	console.log('votingiscool server is running! On port: ' + port + "on db: " + DATABASEURL);
 });
