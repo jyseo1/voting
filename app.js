@@ -50,7 +50,7 @@ app.get('/deadlines', (req, res) => {
 		} else {
 			res.render('deadlines', {deadlines: allDeadlines, page: "deadlines"});
 		}
-	});
+	}).sort({'state': 1});
 
 	// const deadline = new Deadline({
 	// 	state: "Alabama",
