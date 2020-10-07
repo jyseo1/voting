@@ -27,7 +27,7 @@ app.set("view engine", "ejs");
 // ROUTES
 app.get('/', (req, res) => {
 	res.render('home');
-})
+});
 
 app.get('/deadlines', (req, res) => {
 	// Deadline.find()
@@ -63,10 +63,14 @@ app.get('/deadlines', (req, res) => {
 
 app.get('/moreinfo', (req, res) => {
 	res.render('moreinfo');
-})
+});
+
+app.get('/*', (req, res) => {
+	res.render('/');
+});
 
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log('votingiscool server is running!');
+	console.log('votingiscool server is running! On port: ' + port);
 });
