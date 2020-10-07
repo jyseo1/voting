@@ -1,0 +1,21 @@
+<%- include("./partials/header") %>
+<div style="text-align: center; color: whitesmoke; margin-bottom: 2rem;">
+	<h1 style="font-family: 'Oswald', sans-serif;">Voter Registration Deadlines</h1>
+	<h5>Election Day: November 3, 2020</h5>
+</div>
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+	<% deadlines.forEach((deadline)=>{ %>
+	<div class="col-lg-4 col-md-4 col-sm-6">
+		<div class="thumbnail">
+			<h5><strong><%= deadline.state %></strong></h5>
+			<div style="text-align: left;"><strong>In Person:</strong> <%= deadline.inPerson %></div>
+			<div style="text-align: left;"><strong>By Mail:</strong> <%= deadline.mail %></div>
+			<div style="text-align: left;"><strong>Online:</strong> <%= deadline.online %></div>
+			<div style="text-align: left;"><strong>Election Day Registration?</strong> <%= deadline.sameDay %></div>
+		</div>
+	</div>
+	<% }) %>
+</div>
+
+<%- include("./partials/footer") %>
