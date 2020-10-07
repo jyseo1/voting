@@ -33,18 +33,21 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>">
 					<a class="nav-link" href="/">Home
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item <%= typeof page !== 'undefined' && page === 'deadlines' ? 'active' : '' %>">
 					<a class="nav-link" href="/deadlines">Voter Registration Deadlines</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item <%= typeof page !== 'undefined' && page === 'registrationstatus' ? 'active' : '' %>">
+					<a class="nav-link" href="/registrationstatus">Registration Status</a>
+				</li>
+				<li class="nav-item <%= typeof page !== 'undefined' && page === 'absenteeballot' ? 'active' : '' %>">
 					<a class="nav-link" href="/absenteeballot">Request Absentee Ballot</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item <%= typeof page !== 'undefined' && page === 'moreinfo' ? 'active' : '' %>">
 					<a class="nav-link" href="/moreinfo">Very Important Stuff</a>
 				</li>
 			</ul>

@@ -26,15 +26,15 @@ app.set("view engine", "ejs");
 
 // ROUTES
 app.get('/', (req, res) => {
-	res.render('home');
+	res.render('home', { page: "home" });
 });
 
 app.get('/registrationstatus', (req, res) => {
-	res.render('registrationstatus');
+	res.render('registrationstatus', {page: "registrationstatus"});
 });
 
 app.get('/absenteeballot', (req, res) => {
-	res.render('absenteeballot');
+	res.render('absenteeballot', {page: "absenteeballot"});
 });
 
 app.get('/deadlines', (req, res) => {
@@ -48,7 +48,7 @@ app.get('/deadlines', (req, res) => {
 		if(err){
 			console.log("THIS IS DB ERROR: " + err);
 		} else {
-			res.render('deadlines', {deadlines: allDeadlines});
+			res.render('deadlines', {deadlines: allDeadlines, page: "deadlines"});
 		}
 	});
 
@@ -70,7 +70,7 @@ app.get('/deadlines', (req, res) => {
 });
 
 app.get('/moreinfo', (req, res) => {
-	res.render('moreinfo');
+	res.render('moreinfo', {page: "moreinfo"});
 });
 
 app.get('*', (req, res) => {
