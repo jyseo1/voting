@@ -30,7 +30,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/registrationstatus', (req, res) => {
-	res.render('checkregistration');
+	res.render('registrationstatus');
+});
+
+app.get('/absenteeballot', (req, res) => {
+	res.render('absenteeballot');
 });
 
 app.get('/deadlines', (req, res) => {
