@@ -42,6 +42,8 @@ h1 {
 #demo{
 	font-size: xx-large;
 	margin: auto;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
 }
 
 #countdown{
