@@ -37,6 +37,10 @@ app.get('/absenteeballot', (req, res) => {
 	res.render('absenteeballot', {page: "absenteeballot"});
 });
 
+app.get('/howtovote', (req, res) => {
+	res.render('howtovote', {page: "howtovote"});
+});
+
 app.get('/deadlines', (req, res) => {
 	// Deadline.find()
 	// 	.then(result => {
