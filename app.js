@@ -42,12 +42,6 @@ app.get('/howtovote', (req, res) => {
 });
 
 app.get('/deadlines', (req, res) => {
-	// Deadline.find()
-	// 	.then(result => {
-	// 		res.send(result);
-	// 	}).catch(err => {
-	// 		console.log(err.message);
-	// 	});
 	Deadline.find({}, (err, allDeadlines) => {
 		if(err){
 			console.log("THIS IS DB ERROR: " + err);
@@ -55,22 +49,6 @@ app.get('/deadlines', (req, res) => {
 			res.render('deadlines', {deadlines: allDeadlines, page: "deadlines"});
 		}
 	}).sort({'state': 1});
-
-	// const deadline = new Deadline({
-	// 	state: "Alabama",
-	// 	inPerson: "Oct. 19",
-	// 	mail: "Postmarked by Oct. 19",
-	// 	online: 'Oct. 19',
-	// 	sameDay: 'N/A'
-	// });
-
-	// deadline.save()
-	// 	.then((result)=>{
-	// 	res.send(result);
-	// 	})
-	// 	.catch(err => {
-	// 		console.log(err.message);
-	// 	})
 });
 
 app.get('/moreinfo', (req, res) => {
